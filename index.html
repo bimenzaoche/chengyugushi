@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="作者">
+    <title>猜成语</title>
+    <meta name="keywords" content="成语小游戏">
+    <meta name="description" content="成语小游戏介绍">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/idiom.css?t=1">
+</head>
+<body>
+    <div class="top_msg align_c color_ffc size_25">成语小游戏</div>
+    <div class="flex_col hl_idiom">
+        <div>
+            <div class="flex_col flex_col_2 size_20 color_666">
+                <div>
+                    <span>第</span>
+                    <span class="color_09f" id="hl-pass">0</span>
+                    <span>关</span>
+                </div>
+                <div class="align_r">
+                    <span>金币</span>
+                    <span class="color_d51" id="hl-gold">0</span>
+                </div>
+            </div>
+
+            <div class="img_box">
+                <div style="background-image: url('img/001.jpg')" id="hl-img"></div>
+            </div>
+
+            <div class="flex_col flex_col_2 align_c color_09f size_20">
+                <div>
+                    <div class="btn" id="hl-reminder">提示</div>
+                </div>
+                <div>
+                    <div class="btn" id="hl-about">关于</div>
+                </div>
+            </div>
+
+            <div class="select_box selected_box flex_col flex_col_4 align_c color_fff size_25" id="hl-selected">
+            </div>
+
+            <div class="select_box flex_col flex_col_4 flex_wrap align_c color_fff size_25" id="hl-select">
+            </div>
+        </div>
+    </div>
+    
+    <div class="bottom_msg align_c color_ffc size_16">&copy; 2021 xxxx 素材来源于网络</div>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/idiom.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/layer/layer.js"></script>
+    
+    <script type="text/javascript">
+        
+
+        $.HLidiom({
+            pass:0,     //当前关卡，从0开始
+            gold:20    //当前金币数量
+        },idiomData);
+    </script>
+</body>
+</html>
